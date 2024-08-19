@@ -8,8 +8,6 @@ import 'package:news_app/home/settings/settings_tabs.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'Home Screen';
-  const HomeScreen({super.key});
-
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -31,12 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
+            actions: [
+              IconButton(onPressed: (){}, icon: Icon(Icons.search))
+            ],
             title:
                 Text(selectedMenuItem == HomeDrawer.settings ? 'Settings' :
                     selectedCategory == null ?
                     'News App':selectedCategory!.title,
                     style: Theme.of(context).textTheme.titleLarge),
           ),
+          
           drawer: Drawer(
             child: HomeDrawer(onSideMenuItemClick: onSideMenuItemClick ,),
           ),
