@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/api/news_details/news_details.dart';
 import 'package:news_app/home/home_screen.dart';
 import 'package:news_app/my_theme_data.dart';
 
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
