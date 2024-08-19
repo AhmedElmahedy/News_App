@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/api/news_details/article.dart';
 import 'package:news_app/app_colors.dart';
 import 'package:news_app/home/model/NewsResponse.dart';
+import 'package:news_app/home/news_details/article.dart';
 
 class NewsDetails extends StatefulWidget {
   News news;

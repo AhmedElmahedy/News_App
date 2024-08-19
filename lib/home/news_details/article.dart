@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/app_colors.dart';
 import 'package:news_app/home/model/NewsResponse.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
