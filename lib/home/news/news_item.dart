@@ -6,7 +6,8 @@ import 'package:news_app/home/news_details/news_details.dart';
 
 class NewsItem extends StatefulWidget {
   News news;
-  NewsItem({required this.news});
+
+  NewsItem({super.key, required this.news});
 
   @override
   State<NewsItem> createState() => _NewsItemState();
@@ -16,14 +17,15 @@ class _NewsItemState extends State<NewsItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(6),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
+        padding: const EdgeInsets.all(6),
+        child:
+            Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           InkWell(
-            onTap: (){
-             Navigator.push(context,
-                 MaterialPageRoute(
-                     builder: (Context) => NewsDetails(news: widget.news)));
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => NewsDetails(news: widget.news)));
               setState(() {});
             },
             child: ClipRRect(
@@ -34,12 +36,12 @@ class _NewsItemState extends State<NewsItem> {
                 fit: BoxFit.fill,
                 imageUrl: widget.news.urlToImage ?? '',
                 placeholder: (context, url) =>
-                    Center(child: CircularProgressIndicator()),
-                errorWidget: (context, url, error) => Icon(Icons.error),
+                    const Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
@@ -49,14 +51,14 @@ class _NewsItemState extends State<NewsItem> {
                 .titleSmall
                 ?.copyWith(color: AppColors.greyColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             widget.news.title ?? '',
             style: Theme.of(context).textTheme.titleMedium,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(

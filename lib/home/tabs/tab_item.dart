@@ -14,8 +14,8 @@ class TabItem extends StatelessWidget {
       padding: EdgeInsets.all(6),
       margin: EdgeInsets.only(top: 12),
       decoration: BoxDecoration(
-        color: isSelected ? AppColors.primaryLightColor : Colors.transparent,
-        border: Border.all(
+          color: isSelected ? AppColors.primaryLightColor : Colors.transparent,
+          border: Border.all(
           width: 3,
           color: AppColors.primaryLightColor
         ) ,

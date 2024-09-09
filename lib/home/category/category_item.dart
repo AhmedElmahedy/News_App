@@ -13,9 +13,9 @@ CategoryItem({required this.category, required this.index});
       decoration: BoxDecoration(
         color: category.color,
         borderRadius: BorderRadius.only(
-          topLeft:  Radius.circular(25) ,
-          topRight: Radius.circular(25),
-          bottomRight:Radius.circular(
+              topLeft: const Radius.circular(25),
+              topRight: const Radius.circular(25),
+              bottomRight:Radius.circular(
             index % 2 != 0 ? 25 : 0
           ) ,
           bottomLeft: Radius.circular(

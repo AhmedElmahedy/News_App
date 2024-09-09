@@ -8,12 +8,13 @@ class ApiManager{
 /*
 https://newsapi.org/v2/top-headlines/sources?apiKey=fc10793011b54c4fbcd456a7924e743a
  */
- static Future<SourceResponse?> getSources(String categoryId,)async{
-   Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.sourcesApi,
+  Future<SourceResponse?> getSources(
+    String categoryId,
+  ) async {
+    Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.sourcesApi,
        {
      'apiKey' : ApiConstants.apiKey,
          'category' : categoryId,
-
    }
    );
    try{
@@ -28,11 +29,13 @@ https://newsapi.org/v2/top-headlines/sources?apiKey=fc10793011b54c4fbcd456a7924e
  /*
  https://newsapi.org/v2/everything?q=bitcoin&apiKey=fc10793011b54c4fbcd456a7924e743a
   */
- static Future<NewsResponse?> getNewsBySourceId(String sourceId)async{
-   Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.newsApi,{
+  Future<NewsResponse?> getNewsBySourceId(
+    String sourceId,
+  ) async {
+    Uri url = Uri.https(ApiConstants.baseUrl,ApiConstants.newsApi,{
      'apiKey':ApiConstants.apiKey,
-     'sources' : sourceId
-   });
+      'sources': sourceId,
+    });
    try {
     var response = await http.get(url);
     return NewsResponse.fromJson(jsonDecode(response.body));

@@ -10,18 +10,20 @@ class CategoryFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text('Pack your category \nof interest',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: AppColors.greyColor),),
-          SizedBox(height: 15,),
+          const SizedBox(
+            height: 15,
+          ),
           Expanded(
             child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                 ),
